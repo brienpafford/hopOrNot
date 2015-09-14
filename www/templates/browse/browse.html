@@ -1,5 +1,13 @@
 <ion-view view-title="Beers">
   <ion-content>
-    <h1>Beer Cards will generate randomly here</h1>
+    <!-- <h1>Beer Cards will generate randomly here</h1> -->
+    <h2>{{ randomBrew.data.name}}</h2>
+    	<img ng-src=" {{ randomBrew.data.labels.medium }}">
+    	<h4>{{ randomBrew.data.style.name }}</h4>
+    	<h5>ABV: {{ randomBrew.data.abv || "N/A" }}</h5>
+			<h5>IBU: {{ randomBrew.data.ibu || "N/A" }}</h5>
+
+    	<p>{{ randomBrew.data.style.category.name }} </p>
+    	<p>{{ randomBrew.data.description || randomBrew.data.style.category.description}}</p>
   </ion-content>
 </ion-view>

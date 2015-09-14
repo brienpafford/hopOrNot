@@ -1,9 +1,23 @@
 angular.module('hopOrNot.browse.factory', [])
 	
+	.factory('Browse', function ($http, apiKey) {
+		var randomBrew = {
 
-	.factory('browse', function($http) {
-		var brews = {
+			randomBrew : function getRandomBrew(cb) {
 
-		};
-		return brews;
-	})
+				var API_KEY = apiKey;
+
+				$http
+					.get('api/randomBrew?' +
+					 		 'key=' +
+					 		 apiKey +
+					 		 '&hasibu=Y' + 
+					 		 '&hasDescription=Y' +
+					 		 '&hasLabels=Y' +
+					 		 '&format=json'
+					 		 )
+						.success(cb);
+		}
+	} 
+	return randomBrew;
+})
