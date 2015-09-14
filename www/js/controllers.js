@@ -37,7 +37,7 @@ angular.module('hopOrNot.controllers', [])
     // code if using a login system
     $timeout(function() {
       $scope.closeLogin();
-    }, 700);
+    }, 1400);
   };
 })
 

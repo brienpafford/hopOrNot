@@ -42,7 +42,26 @@ angular.module('hopOrNot', ['ionic', 'hopOrNot.controllers'])
           templateUrl: 'templates/browse.html'
         }
       }
-    });
+    })
+
+    .state('app.myBrews', {
+      url:'/myList',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/myBrews.html'
+        }
+      }
+    })
+
+    .state('app.settings', {
+      url:'/settings',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/settings.html'
+        }
+      }
+    })
+    
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/app/browse');
 });
