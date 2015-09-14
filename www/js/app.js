@@ -1,4 +1,11 @@
-angular.module('hopOrNot', ['ionic', 'hopOrNot.controllers'])
+angular.module('hopOrNot', [
+               'ionic', 
+               'hopOrNot.controllers',
+               'hopOrNot.menu',
+               'hopOrNot.browse',
+               'hopOrNot.search',
+               'hopOrNot.settings'
+               ])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -22,7 +29,7 @@ angular.module('hopOrNot', ['ionic', 'hopOrNot.controllers'])
     .state('app', {
     url: '/app',
     abstract: true,
-    templateUrl: 'templates/menu.html',
+    templateUrl: 'templates/menu/menu.html',
     controller: 'AppCtrl'
   })
 
@@ -30,7 +37,8 @@ angular.module('hopOrNot', ['ionic', 'hopOrNot.controllers'])
     url: '/search',
     views: {
       'menuContent': {
-        templateUrl: 'templates/search.html'
+        templateUrl: 'templates/search/search.html',
+        controller: 'searchCtrl'
       }
     }
   })
@@ -39,7 +47,8 @@ angular.module('hopOrNot', ['ionic', 'hopOrNot.controllers'])
       url: '/browse',
       views: {
         'menuContent': {
-          templateUrl: 'templates/browse.html'
+          templateUrl: 'templates/browse/browse.html',
+          controller: 'browseCtrl'
         }
       }
     })
@@ -48,7 +57,8 @@ angular.module('hopOrNot', ['ionic', 'hopOrNot.controllers'])
       url:'/myList',
       views: {
         'menuContent': {
-          templateUrl: 'templates/myBrews.html'
+          templateUrl: 'templates/myBrews/myBrews.html',
+          controller: 'myBrewsCtrl'
         }
       }
     })
@@ -57,7 +67,8 @@ angular.module('hopOrNot', ['ionic', 'hopOrNot.controllers'])
       url:'/settings',
       views: {
         'menuContent': {
-          templateUrl: 'templates/settings.html'
+          templateUrl: 'templates/settings/settings.html',
+          controller: 'settingsCtrl'
         }
       }
     })
