@@ -3,6 +3,7 @@ angular.module('hopOrNot', [
                'hopOrNot.controllers',
                'hopOrNot.menu',
                'hopOrNot.browse',
+               'hopOrNot.browse.factory',
                'hopOrNot.search',
                'hopOrNot.settings'
                ])
