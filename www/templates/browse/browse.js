@@ -10,4 +10,6 @@ angular.module('hopOrNot.browse', [])
  			$ionicLoading.hide();
  		})
 
+ 		
+
 	});
