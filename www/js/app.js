@@ -5,24 +5,26 @@ angular.module('hopOrNot', [
                'hopOrNot.browse',
                'hopOrNot.browse.factory',
                'hopOrNot.search',
-               'hopOrNot.settings'
+               'hopOrNot.settings',
+               'hopOrNot.services',
+               'hopOrNot.hopList'
                ])
 
-.run(function($ionicPlatform) {
-  $ionicPlatform.ready(function() {
-    // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
-    // for form inputs)
-    if (window.cordova && window.cordova.plugins.Keyboard) {
-      cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
-      cordova.plugins.Keyboard.disableScroll(true);
+// .run(function($ionicPlatform) {
+//   $ionicPlatform.ready(function() {
+//     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
+//     // for form inputs)
+//     if (window.cordova && window.cordova.plugins.Keyboard) {
+//       cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
+//       cordova.plugins.Keyboard.disableScroll(true);
 
-    }
-    if (window.StatusBar) {
-      // org.apache.cordova.statusbar required
-      StatusBar.styleDefault();
-    }
-  });
-})
+//     }
+//     if (window.StatusBar) {
+//       // org.apache.cordova.statusbar required
+//       StatusBar.styleDefault();
+//     }
+//   });
+// })
 
 .config(function($stateProvider, $urlRouterProvider) {
   $stateProvider
@@ -43,7 +45,31 @@ angular.module('hopOrNot', [
       }
     }
   })
-
+  // auth
+  .state('auth', {
+      url: "/auth",
+      abstract: true,
+      templateUrl: "templates/auth/auth.html"
+  })
+  // .state('auth.signin', {
+  //     url: '/signin',
+  //     views: {
+  //         'auth-signin': {
+  //             templateUrl: 'templates/auth/auth-signin.html',
+  //             controller: 'SignInCtrl'
+  //         }
+  //     }
+  // })
+  // .state('auth.signup', {
+  //     url: '/signup',
+  //     views: {
+  //         'auth-signup': {
+  //             templateUrl: 'templates/auth/auth-signup.html',
+  //             controller: 'SignUpCtrl'
+  //         }
+  //     }
+  // })
+// auth
   .state('app.browse', {
       url: '/browse',
       views: {
@@ -54,12 +80,12 @@ angular.module('hopOrNot', [
       }
     })
 
-    .state('app.myBrews', {
-      url:'/myList',
+    .state('app.hopList', {
+      url:'/hopList',
       views: {
         'menuContent': {
-          templateUrl: 'templates/myBrews/myBrews.html',
-          controller: 'myBrewsCtrl'
+          templateUrl: 'templates/hopList/hopList.html',
+          controller: 'hopListCtrl'
         }
       }
     })
@@ -72,7 +98,7 @@ angular.module('hopOrNot', [
           controller: 'settingsCtrl'
         }
       }
-    })
+    });
     
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/app/browse');
