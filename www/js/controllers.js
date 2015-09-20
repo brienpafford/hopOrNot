@@ -32,4 +32,12 @@ angular.module('hopOrNot.controllers', [])
       $scope.closeLogin();
     }, 1400);
   };
+// Service Code
+
+
+
+
+
+
+
 });

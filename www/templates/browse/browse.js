@@ -1,14 +1,16 @@
 angular.module('hopOrNot.browse', [])
 
-	.controller('browseCtrl', function($scope, $state, $stateParams, $ionicLoading, Browse) {
+		.controller('browseCtrl', function($scope, $state, $stateParams, $ionicLoading, Browse) {
+			
+		 $ionicLoading.show({
+				template: '<ion-spinner icon="lines"/></p>'
+		});
 
-			$ionicLoading.show();
-
- 		Browse.randomBrew(function(data) {
- 			$scope.randomBrew = data;
- 			console.log($scope.randomBrew)
- 			$ionicLoading.hide();
- 		})
+	 		Browse.randomBrew(function(data) {
+	 			$scope.randomBrew = data;
+	 			$ionicLoading.hide();
+	 			console.log($scope.randomBrew) 			
+	 		})
 
  		
 
