@@ -76,6 +76,16 @@ angular.module('hopOrNot', [
         }
       })
 
+      .state('app.hopView', {
+        url:'/hopView',
+        views: {
+          'menuContent': {
+            templateUrl: 'templates/hopList/hopView.html',
+            controller: 'hopListCtrl'
+          }
+        }
+      })
+
       .state('app.settings', {
         url:'/settings',
         views: {

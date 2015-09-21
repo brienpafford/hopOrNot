@@ -26,7 +26,7 @@ angular.module('hopOrNot.browse', [])
  				style: 				currentBrew.data.style.name,
  				abv: 					currentBrew.data.abv,
  				ibu:          currentBrew.data.ibu, 
- 				description:  currentBrew.data.style.category.description,
+ 				description:  currentBrew.data.description,
  				availability: currentBrew.data.available.name,
  				icon: 				currentBrew.data.labels.icon,
  				image:        currentBrew.data.labels.medium 
