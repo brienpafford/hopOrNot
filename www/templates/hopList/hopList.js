@@ -14,13 +14,10 @@ angular.module('hopOrNot.hopList', [])
           $ionicLoading.hide();
           $scope.hops = allBrews.Beer_Details;
           console.log($scope.hops)
-
-          // var item = $scope.hops[index];
-          // console.log()
         })
       
 
-      $scope.log = function(hop) {
+      $scope.removeBeer = function(hop) {
         var hopID = hop;
         console.log(hopID);
         var url = 'http://localhost:3000/removeBeer';
