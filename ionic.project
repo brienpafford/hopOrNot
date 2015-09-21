@@ -5,6 +5,10 @@
     {
       "path": "/api/randomBrew",
       "proxyUrl": "http://api.brewerydb.com/v2/beer/random/"
+    },
+    {
+    	"path": "/api/saveBrew",
+    	"proxyUrl": "http://localhost:3000/"
     }
   ]
 }

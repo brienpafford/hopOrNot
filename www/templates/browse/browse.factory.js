@@ -1,6 +1,6 @@
-angular.module('hopOrNot.browse.factory', [])
+angular.module('hopOrNot.browse.factories', [])
 	
-	.factory('Browse', function ($http, brewdbKEY) {
+	.factory('Browse', function($http, brewdbKEY) {
 		var randomBrew = {
 
 			randomBrew : function getRandomBrew(cb) {
@@ -13,7 +13,9 @@ angular.module('hopOrNot.browse.factory', [])
 					 		 '&hasLabels=Y' +
 					 		 '&format=json')
 					.success(cb)
-		}
-	} 
-	return randomBrew;
-})
+			}
+		} 
+		return randomBrew;
+	})
+
+

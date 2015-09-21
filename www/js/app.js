@@ -1,9 +1,10 @@
 angular.module('hopOrNot', [
                'ionic', 
+               'ngCordova',
                'hopOrNot.controllers',
                'hopOrNot.menu',
                'hopOrNot.browse',
-               'hopOrNot.browse.factory',
+               'hopOrNot.browse.factories',
                'hopOrNot.search',
                'hopOrNot.settings',
                'hopOrNot.services',
@@ -88,3 +89,4 @@ angular.module('hopOrNot', [
     // if none of the above states are matched, use this as the fallback
     $urlRouterProvider.otherwise('/app/browse');
   });
+

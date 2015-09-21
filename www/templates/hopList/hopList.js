@@ -1,6 +1,8 @@
 angular.module('hopOrNot.hopList', [])
 	
-    .controller('hopListCtrl', function($scope, $ionicLoading, hopList) {
+    .controller('hopListCtrl', function($scope, $ionicLoading, $state, hopList) {
+
+    
 
       $ionicLoading.show({
         template: '<ion-spinner icon="lines"/></p>'
