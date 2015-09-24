@@ -8,6 +8,11 @@
   width: 100%; 
 }
 
+.menuBtn {
+  background-color: #444444;
+  color: #444444 !important;
+}
+
 .landing {
     background: url('../img/stock/beer-926287_1280.jpg');
   
@@ -15,7 +20,8 @@
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-size: 250% auto;
+    background-size: 100% auto;
+    top: 50%;
 
   }
 
@@ -36,7 +42,6 @@
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: 100% auto;
-    /*z-index: -1;*/
   }
 
   .sMenu {
@@ -47,8 +52,54 @@
   	text-align: center;
   }
 
+  .hopListCard .item {
+    background-color: #444444 !important;
+    background-opacity: .2 !important;
+    color: #F5F5F5;
+  }
+
+.hopListCard .item h2 {
+    color: #F5F5F5;
+  }
+
+.hopListCard .item img {
+    opacity: .9;
+  }  
+
+.hopListCard .item p {
+    color: #F5F5F5;
+  }  
+
+ .browseCard .item {
+  background-color: #444444 !important;
+  background-opacity: .2 !important;
+  color: #F5F5F5;
+}
+
+.browseCard .item h2 {
+    color: #F5F5F5;
+  }
+
+ .browseCard .item h5 {
+    color: #F5F5F5;
+  } 
+
+ .browseCard .item h6 {
+    color: #F5F5F5;
+  }  
+
+.browseCard .item img {
+    opacity: .9;
+  }  
+
+.browseCard .item p {
+    color: #F5F5F5;
+  }  
+
+
   div.list.card {
   	position: center;
+
     background-color: #444444;
   }
 

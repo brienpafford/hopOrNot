@@ -1,6 +1,6 @@
 <ion-view cache-view="false" view-title="Beers">
   <ion-content class="browse">
-  	<div class="card">
+  	<div class="card browseCard">
   		<div class="item item-divider">
   			<h2>{{ randomBrew.data.name}}</h2>
   		</div>
@@ -13,8 +13,9 @@
 
     	<p>{{ randomBrew.data.style.category.name }} </p>
     	<p>{{ randomBrew.data.description || randomBrew.data.style.category.description}}</p>
-      <button class ="button" ng-click="pourBeer()">Random Beer</button>
-      <button class ="button" ng-click="saveBeertoHopList()">Save Beer</button>
+      <button class ="button button-royal" ng-click="pourBeer()"><i class="icon ion-ios-help"><span>&nbsp</span></i>Random Beer</button>
+      <button class ="button button-balanced" ng-click="saveBeertoHopList()">
+      <i class="icon ion-ios-pint"><span>&nbsp</span></i>Save Beer</button>
 			</div>
   	</div>    	
   </ion-content>

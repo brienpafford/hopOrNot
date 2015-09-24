@@ -1,10 +1,6 @@
 <ion-view cache-view="false" view-title="My Hop List">
   <ion-content = 'browseCtrl' class="hopList">
-   <!--  <div>
-        <label>Search: <input ng-model="searchText"></label>
-    </div> -->
-     <div class="list card" ng-repeat="hop in hops | filter:search">
-      <!-- <p ng-show="!hops">No Hops in the List. Save Some!</p> -->
+     <div class="card hopListCard" ng-repeat="hop in hops | filter:search">
         <div class="item item-avatar">
           <img src="{{ hop.icon }}">
           <h2>{{ hop.name }}</h2>
@@ -20,7 +16,7 @@
         </div>
         <div class="item tabs tabs-secondary tabs-icon-left">
           <button class="button button-block button-assertive" ng-click="removeBeer(hop._id)">
-            <!-- <i class="icon ion-trash"></i> -->
+            <i class="icon ion-trash-b"></i>
             Delete
           </button>
         </div>
