@@ -20,7 +20,7 @@ angular.module('hopOrNot.hopList', [])
       $scope.removeBeer = function(hop) {
         var hopID = hop;
         console.log(hopID);
-        var url = 'http://localhost:3000/removeBeer';
+        var url = 'https://heroku-bartender-node-api.herokuapp.com/removeBeer';
         var params = {_id: hopID}
         $http.put(url, params)
         .success(function(data, status, headers, config){})

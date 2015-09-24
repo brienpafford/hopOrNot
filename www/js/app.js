@@ -9,7 +9,8 @@ angular.module('hopOrNot', [
                'hopOrNot.settings',
                'hopOrNot.services',
                'hopOrNot.hopList',
-               'hopOrNot.hopList.factory'
+               'hopOrNot.hopList.factory',
+               'hopOrNot.landing'
                ])
 
   .config(function($stateProvider, $urlRouterProvider) {
@@ -31,6 +32,17 @@ angular.module('hopOrNot', [
         }
       }
     })
+
+    .state('app.landing', {
+      url: '/landing',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/landing/landing.html',
+          controller: 'landingCtrl'
+        }
+      }
+    })
+
     // auth
     .state('auth', {
         url: "/auth",
@@ -76,16 +88,6 @@ angular.module('hopOrNot', [
         }
       })
 
-      .state('app.hopView', {
-        url:'/hopView',
-        views: {
-          'menuContent': {
-            templateUrl: 'templates/hopList/hopView.html',
-            controller: 'hopListCtrl'
-          }
-        }
-      })
-
       .state('app.settings', {
         url:'/settings',
         views: {
@@ -97,7 +99,7 @@ angular.module('hopOrNot', [
       })
           
     // if none of the above states are matched, use this as the fallback
-    $urlRouterProvider.otherwise('/app/browse');
+    $urlRouterProvider.otherwise('/app/landing');
   })
 
 .run(function($ionicPlatform) {

@@ -1,1 +1,60 @@
 /* Empty. Add your own CSS if you like */
+
+ .scroll-content{
+  background-color: #444444;
+}
+
+.logo { 
+  width: 100%; 
+}
+
+.landing {
+    background: url('../img/stock/beer-926287_1280.jpg');
+  
+    background-color: #444444;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 250% auto;
+
+  }
+
+  .browse {
+    background: url('../img/stock/beer-923633_1920.jpg');
+    background-color: #444444;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 180% auto;
+    /*z-index: -1;*/
+  }
+
+  .hopList {
+    background: url('../img/stock/mug-glass-beer.jpg');
+    background-color: #444444;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% auto;
+    /*z-index: -1;*/
+  }
+
+  .sMenu {
+  	background: url('../img/stock/beer-699453_1280.jpg');
+  	background-size: 100% auto;
+  	background-color: #444444;
+  	background-repeat: no-repeat;
+  	text-align: center;
+  }
+
+  div.list.card {
+  	position: center;
+    background-color: #444444;
+  }
+
+  h4 {
+    color: white;
+    background-color: ;
+  }
+
+ 

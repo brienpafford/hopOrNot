@@ -19,7 +19,7 @@ angular.module('hopOrNot.browse', [])
  		$scope.saveBeertoHopList = function() {
 
  			var currentBrew = $scope.randomBrew;
- 			var url = "http://localhost:3000/createBeer";
+ 			var url = "https://heroku-bartender-node-api.herokuapp.com/createBeer";
  			var params = {
  				name: 				currentBrew.data.name,
  				brewery: 			currentBrew.data.name,
