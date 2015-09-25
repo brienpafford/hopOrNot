@@ -2,13 +2,11 @@ angular.module('hopOrNot.hopList', [])
     
     .controller('hopListCtrl', function($scope, $http, $ionicLoading, $state, hopList) {
 
-    
-
       $ionicLoading.show({
         template: '<p><ion-spinner icon="lines"/></p>'
         });
 
-     //  Return All Beers
+//  Return All Beers
 
        hopList.allBeers(function(allBrews) {
           $ionicLoading.hide();

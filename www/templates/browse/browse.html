@@ -1,5 +1,5 @@
 <ion-view cache-view="false" view-title="Beers">
-  <ion-content class="browse">
+  <ion-content class="browse" ng-controller="browseCtrl">
   	<div class="card browseCard">
   		<div class="item item-divider">
   			<h2>{{ randomBrew.data.name}}</h2>
@@ -10,11 +10,10 @@
     	<h5>ABV: {{ randomBrew.data.abv || "N/A" }}</h5>
 			<h5>IBU: {{ randomBrew.data.ibu || "N/A" }}</h5>
       <h6>{{ randomBrew.data.available.name }}</h6>
-
     	<p>{{ randomBrew.data.style.category.name }} </p>
     	<p>{{ randomBrew.data.description || randomBrew.data.style.category.description}}</p>
       <button class ="button button-royal" ng-click="pourBeer()"><i class="icon ion-ios-help"><span>&nbsp</span></i>Random Beer</button>
-      <button class ="button button-balanced" ng-click="saveBeertoHopList()">
+      <button class ="button button-balanced" ng-click="saveBeertoHopList();showToast('Beer Saved!', 'short', 'bottom')">
       <i class="icon ion-ios-pint"><span>&nbsp</span></i>Save Beer</button>
 			</div>
   	</div>    	

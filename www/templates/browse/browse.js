@@ -6,7 +6,7 @@ angular.module('hopOrNot.browse', [])
 				template: '<ion-spinner icon="lines"/></p>'
 		});
 
-		 // Get Beer from Factory
+// Get Beer from Factory
 
 	 		Browse.randomBrew(function(data) {
 	 			$scope.randomBrew = data;
@@ -14,7 +14,7 @@ angular.module('hopOrNot.browse', [])
 	 			console.log(data)	
 	 		});
 	 		
-	 		// Save Beer to Database
+// Save Beer to Database
 
  		$scope.saveBeertoHopList = function() {
 
@@ -36,16 +36,18 @@ angular.module('hopOrNot.browse', [])
  				.error(function(data, status, headers, config){})
  		}
 
+// Show Toast on Successful Save
+
+ 		$scope.showToast = function(message, duration, location) {
+        $cordovaToast.show(message, duration, location).then(function(success) {
+        }, function (error) {
+            console.log("The toast was not shown due to " + error);
+        });
+    }
+
+// Reload Page with new Beer
 
  		$scope.pourBeer = function() {
  			$state.go($state.current, {}, {reload: true});
  		}
-
-	 		// $scope.showToast = function(message, duration, location) {
-    //     $cordovaToast.show(message, duration, location).then(function(success) {
-    //         console.log("The toast was shown");
-    //     }, function (error) {
-    //         console.log("The toast was not shown due to " + error);
-    //     });
-    // }
 	});
