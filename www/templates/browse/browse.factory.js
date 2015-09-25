@@ -15,7 +15,7 @@ angular.module('hopOrNot.browse.factories', [])
 		var randomBrew = {
 			randomBrew : function getRandomBrew(cb) {
 				$http
-					.get(apiProd)
+					.get(apiDev)
 					.success(cb)
 			}
 		} 
