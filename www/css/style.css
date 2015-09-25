@@ -5,7 +5,18 @@
 }
 
 .logo { 
-  width: 100%; 
+  margin-top: 40px;
+  width: 100%;
+  position: fixed;
+  border-radius:10px;
+
+}
+.full-image {
+  opacity: .0;
+}
+
+.landing-image {
+  height: 150%;
 }
 
 .menuBtn {
@@ -14,14 +25,14 @@
 }
 
 .landing {
-    background: url('../img/stock/beer-926287_1280.jpg');
+    background: url('../img/stock/mainpage1.png');
   
     background-color: #444444;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-size: 100% auto;
-    top: 50%;
+    background-size: 120% auto;
+    /*bottom: 50%;*/
 
   }
 
@@ -50,6 +61,7 @@
   	background-color: #444444;
   	background-repeat: no-repeat;
   	text-align: center;
+
   }
 
   .hopListCard .item {
